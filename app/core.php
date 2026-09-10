@@ -1,0 +1,38 @@
+<?php
+declare(strict_types=1);
+require_once __DIR__.'/../config/config.php';
+require_once __DIR__.'/../includes/errors.php';
+require_once __DIR__.'/../includes/db.php';
+function q(string $sql,array $args=[]): PDOStatement {$s=db()->prepare($sql);$s->execute($args);return $s;}
+function one(string $sql,array $args=[]): ?array {return q($sql,$args)->fetch()?:null;}
+function tx(callable $f) {$p=db();if($p->inTransaction())return $f();$p->beginTransaction();try{$r=$f();$p->commit();return $r;}catch(Throwable $e){if($p->inTransaction())$p->rollBack();throw $e;}}
+function lang(): string {$l=$_POST['lang']??$_GET['lang']??($_SESSION['lang']??'fr');return $l==='ar'?'ar':'fr';}
+function tr(string $fr,string $ar): string {return lang()==='ar'?$ar:$fr;}
+function fail(int $status,string $code,string $fr,string $ar=''): void {throw new ApiError($status,$code,lang()==='ar'&&$ar!==''?$ar:$fr);}
+function esc($v): string {return htmlspecialchars((string)($v??''),ENT_QUOTES|ENT_SUBSTITUTE,'UTF-8');}
+function url(string $p=''): string {return APP_BASE.'/'.ltrim($p,'/');}
+function start(): void {
+ if(session_status()!==PHP_SESSION_ACTIVE){ini_set('session.use_strict_mode','1');ini_set('session.use_only_cookies','1');session_name('petica_session');session_set_cookie_params(['lifetime'=>0,'path'=>APP_BASE?:'/','secure'=>str_starts_with(APP_URL,'https://'),'httponly'=>true,'samesite'=>'Lax']);session_start();}
+ if(isset($_SESSION['seen'])&&(time()-(int)$_SESSION['seen']>SESSION_LIFETIME||time()-(int)($_SESSION['born']??time())>43200)){$_SESSION=[];session_regenerate_id(true);}
+ $_SESSION['seen']=time();$_SESSION['born']=$_SESSION['born']??time();$_SESSION['csrf']=$_SESSION['csrf']??bin2hex(random_bytes(32));
+}
+function csrf(): string {start();return $_SESSION['csrf'];}
+function csrf_check(array $b): void {$v=$_SERVER['HTTP_X_CSRF_TOKEN']??($b['_csrf']??'');if(!is_string($v)||!hash_equals(csrf(),$v))fail(403,'csrf','Session du formulaire expirée. Rechargez la page.','انتهت صلاحية النموذج. أعد تحميل الصفحة.');}
+function actor(bool $required=false): ?array {start();$u=empty($_SESSION['user_id'])?null:one('SELECT id,email,role,status,language,is_demo,auth_version FROM users WHERE id=?',[(int)$_SESSION['user_id']]);if($u&&($u['status']!=='active'||(int)$u['auth_version']!==(int)($_SESSION['auth_version']??0)||($u['is_demo']&&!cfg('ALLOW_DEMO',false))))$u=null;if($required&&!$u)fail(401,'authentication','Connectez-vous pour continuer.','سجّل الدخول للمتابعة.');return $u;}
+function roles(array $allowed): array {$u=actor(true);if(!in_array($u['role'],$allowed,true))fail(403,'forbidden','Accès non autorisé.','الدخول غير مسموح.');return $u;}
+function admin(): array {return roles(['admin']);}
+function login_user(array $u): void {start();session_regenerate_id(true);$_SESSION=['user_id'=>$u['id'],'auth_version'=>(int)($u['auth_version']??0),'lang'=>$u['language'],'csrf'=>bin2hex(random_bytes(32)),'seen'=>time(),'born'=>time()];}
+function audit(string $action,string $type,?int $id,array $meta=[]): void {q('INSERT INTO audit_logs(actor_user_id,action,entity_type,entity_id,meta) VALUES(?,?,?,?,?)',[$_SESSION['user_id']??null,$action,$type,$id,json_encode($meta,JSON_UNESCAPED_UNICODE)]);}
+function text_field(array $b,string $k,int $max=255,bool $required=false): ?string {$v=$b[$k]??null;if($v!==null&&!is_scalar($v))fail(422,'validation','Champ invalide : '.$k,'حقل غير صالح: '.$k);$v=trim((string)$v);if(($required&&$v==='')||mb_strlen($v)>$max)fail(422,'validation','Vérifiez le champ : '.$k,'تحقق من الحقل: '.$k);return $v===''?null:$v;}
+function enum_field(array $b,string $k,array $allowed,?string $default=null): ?string {$v=text_field($b,$k,100)??$default;if($v!==null&&!in_array($v,$allowed,true))fail(422,'validation','Valeur non autorisée : '.$k,'قيمة غير مسموحة: '.$k);return $v;}
+function checked($v): int {return in_array($v,[1,'1',true,'on'],true)?1:0;}
+function page_meta(): array {$p=max(1,min(100000,(int)($_GET['page']??1)));return [$p,25,($p-1)*25];}
+function listing(string $select,string $from,array $args=[],string $order='id DESC'): array {[$p,$limit,$offset]=page_meta();$n=(int)q('SELECT COUNT(*) '.$from,$args)->fetchColumn();return ['items'=>q('SELECT '.$select.' '.$from.' ORDER BY '.$order.' LIMIT '.$limit.' OFFSET '.$offset,$args)->fetchAll(),'meta'=>['page'=>$p,'per_page'=>$limit,'total'=>$n,'pages'=>(int)ceil($n/$limit)]];}
+function setting(string $key,$fallback=null) {$r=one('SELECT value FROM system_settings WHERE `key`=?',[$key]);return $r?json_decode($r['value'],true):$fallback;}
+function set_setting(string $key,$v): void {q('INSERT INTO system_settings(`key`,value) VALUES(?,?) ON DUPLICATE KEY UPDATE value=VALUES(value)',[$key,json_encode($v,JSON_UNESCAPED_UNICODE)]);}
+function request_body(): array {foreach($_GET as $v)if(is_array($v))fail(400,'query','Paramètre invalide.');if(str_contains($_SERVER['CONTENT_TYPE']??'','application/json')){$raw=file_get_contents('php://input');if(strlen($raw)>262144)fail(413,'too_large','Requête trop volumineuse.');$b=json_decode($raw,true);if(!is_array($b))fail(400,'invalid_json','JSON invalide.');return $b;}return $_POST;}
+function rate(string $scope,int $max,int $seconds): void {$key=hash('sha256',$scope.'|'.($_SERVER['REMOTE_ADDR']??'local').'|'.gmdate('Y-m-d').'|'.(string)cfg('APP_KEY','local-only'));$bucket=(int)floor(time()/$seconds);q('INSERT INTO rate_limits(bucket_key,bucket,hits) VALUES(?,?,1) ON DUPLICATE KEY UPDATE hits=hits+1',[$key,$bucket]);if((int)q('SELECT hits FROM rate_limits WHERE bucket_key=? AND bucket=?',[$key,$bucket])->fetchColumn()>$max){header('Retry-After: '.$seconds);fail(429,'rate_limit','Trop de tentatives. Réessayez plus tard.','محاولات كثيرة. حاول لاحقًا.');}}
+function once(array $u,string $scope,array $b,callable $fn): array {$key=$_SERVER['HTTP_IDEMPOTENCY_KEY']??($b['idempotency_key']??'');if(!is_string($key)||!preg_match('/^[A-Za-z0-9_-]{16,100}$/',$key))fail(422,'idempotency_required','Clé de reprise manquante. Rechargez le formulaire.','مفتاح الاستئناف مفقود. أعد تحميل النموذج.');unset($b['_csrf'],$b['idempotency_key']);$hash=hash('sha256',json_encode($b));return tx(function()use($u,$scope,$key,$hash,$fn){q('INSERT IGNORE INTO action_idempotency(user_id,scope,request_key,request_hash) VALUES(?,?,?,?)',[$u['id'],$scope,$key,$hash]);$r=one('SELECT * FROM action_idempotency WHERE user_id=? AND scope=? AND request_key=? FOR UPDATE',[$u['id'],$scope,$key]);if(!hash_equals($r['request_hash'],$hash))fail(409,'idempotency_conflict','Cette clé correspond à une autre saisie.');if($r['result_json']!==null)return json_decode($r['result_json'],true);$out=$fn();q('UPDATE action_idempotency SET result_json=? WHERE id=?',[json_encode($out,JSON_UNESCAPED_UNICODE),$r['id']]);return $out;});}
+function notify(int $uid,string $type,string $title,string $body,string $related,int $id): int {q('INSERT INTO notifications(user_id,type,title,body,related_type,related_id) VALUES(?,?,?,?,?,?)',[$uid,$type,$title,$body,$related,$id]);$nid=(int)db()->lastInsertId();if(cfg('EMAIL_ENABLED',false))q('INSERT INTO notification_outbox(notification_id,channel,status) VALUES(?,"email","queued")',[$nid]);return $nid;}
+function headers_safe(bool $private=true): void {header('X-Content-Type-Options: nosniff');header('Referrer-Policy: no-referrer');header('Permissions-Policy: geolocation=(self), camera=(self), microphone=()');header('X-Frame-Options: DENY');if($private){header('Cache-Control: private, no-store');header('X-Robots-Tag: noindex, nofollow');}}
+function money(int $m): string {return number_format($m/1000,3,lang()==='ar'?'.':',',' ').' TND';}

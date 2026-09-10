@@ -1,0 +1,2627 @@
+{
+    "tables": [
+        {
+            "name": "action_idempotency"
+        },
+        {
+            "name": "audit_logs"
+        },
+        {
+            "name": "auth_tokens"
+        },
+        {
+            "name": "billion_movement"
+        },
+        {
+            "name": "companions"
+        },
+        {
+            "name": "companion_owners"
+        },
+        {
+            "name": "companion_owner_invites"
+        },
+        {
+            "name": "contact_requests"
+        },
+        {
+            "name": "content_versions"
+        },
+        {
+            "name": "crm_activity"
+        },
+        {
+            "name": "crm_contacts"
+        },
+        {
+            "name": "crm_followups"
+        },
+        {
+            "name": "crm_interactions"
+        },
+        {
+            "name": "crm_notes"
+        },
+        {
+            "name": "customer_profiles"
+        },
+        {
+            "name": "lost_cases"
+        },
+        {
+            "name": "nero_answers"
+        },
+        {
+            "name": "notifications"
+        },
+        {
+            "name": "notification_outbox"
+        },
+        {
+            "name": "orders"
+        },
+        {
+            "name": "order_items"
+        },
+        {
+            "name": "order_status_history"
+        },
+        {
+            "name": "password_reset_tokens"
+        },
+        {
+            "name": "products"
+        },
+        {
+            "name": "professional_clients"
+        },
+        {
+            "name": "professional_profiles"
+        },
+        {
+            "name": "promo_codes"
+        },
+        {
+            "name": "promo_code_redemptions"
+        },
+        {
+            "name": "qr_identities"
+        },
+        {
+            "name": "qr_scan_events"
+        },
+        {
+            "name": "qr_scan_event_entries"
+        },
+        {
+            "name": "quotes"
+        },
+        {
+            "name": "rate_limits"
+        },
+        {
+            "name": "registration_drafts"
+        },
+        {
+            "name": "registration_events"
+        },
+        {
+            "name": "schema_migrations"
+        },
+        {
+            "name": "serial_aliases"
+        },
+        {
+            "name": "serial_counters"
+        },
+        {
+            "name": "session_notes"
+        },
+        {
+            "name": "species_codes"
+        },
+        {
+            "name": "system_settings"
+        },
+        {
+            "name": "uploaded_media"
+        },
+        {
+            "name": "users"
+        },
+        {
+            "name": "veterinary_attachments"
+        },
+        {
+            "name": "veterinary_records"
+        }
+    ],
+    "columns": [
+        {
+            "table_name": "action_idempotency",
+            "name": "id",
+            "type": "bigint(20)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "action_idempotency",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "action_idempotency",
+            "name": "scope",
+            "type": "varchar(60)",
+            "key_type": ""
+        },
+        {
+            "table_name": "action_idempotency",
+            "name": "request_key",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "action_idempotency",
+            "name": "request_hash",
+            "type": "char(64)",
+            "key_type": ""
+        },
+        {
+            "table_name": "action_idempotency",
+            "name": "result_json",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "action_idempotency",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "actor_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "action",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "entity_type",
+            "type": "varchar(50)",
+            "key_type": ""
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "entity_id",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "meta",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "ip",
+            "type": "varchar(64)",
+            "key_type": ""
+        },
+        {
+            "table_name": "audit_logs",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "token_id",
+            "type": "varchar(190)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "user_agent",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "ip",
+            "type": "varchar(64)",
+            "key_type": ""
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "expires_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "revoked_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "auth_tokens",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "billion_movement",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "billion_movement",
+            "name": "target",
+            "type": "bigint(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "billion_movement",
+            "name": "milestone_config",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "billion_movement",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "companions",
+            "name": "serial_number",
+            "type": "varchar(20)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "companions",
+            "name": "species",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "species_code",
+            "type": "char(3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "name",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "breed",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "sex",
+            "type": "varchar(10)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "date_of_birth",
+            "type": "date",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "colors_marks",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "weight_kg",
+            "type": "decimal(6,2)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "microchip_number",
+            "type": "varchar(50)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "vaccinated",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "medical_info",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "photo_path",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "paw_photo_path",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "companions",
+            "name": "lost_message",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "lost_since",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "public_contact_name",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "public_contact_phone",
+            "type": "varchar(30)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "public_show_breed",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "version",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companions",
+            "name": "public_contact_consent",
+            "type": "tinyint(4)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companion_owners",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "companion_owners",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "companion_owners",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "companion_owners",
+            "name": "relationship",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companion_owners",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "name": "name",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "name": "invited_by",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "name": "confirmed_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "contact_requests",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "contact_requests",
+            "name": "name",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "contact_requests",
+            "name": "email",
+            "type": "varchar(190)",
+            "key_type": ""
+        },
+        {
+            "table_name": "contact_requests",
+            "name": "message",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "contact_requests",
+            "name": "language",
+            "type": "char(2)",
+            "key_type": ""
+        },
+        {
+            "table_name": "contact_requests",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "contact_requests",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "content_versions",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "content_versions",
+            "name": "slug",
+            "type": "varchar(120)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "content_versions",
+            "name": "title_fr",
+            "type": "varchar(200)",
+            "key_type": ""
+        },
+        {
+            "table_name": "content_versions",
+            "name": "title_ar",
+            "type": "varchar(200)",
+            "key_type": ""
+        },
+        {
+            "table_name": "content_versions",
+            "name": "body_fr",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "content_versions",
+            "name": "body_ar",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "content_versions",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "content_versions",
+            "name": "author_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "content_versions",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "content_versions",
+            "name": "published_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "contact_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "actor_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "type",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "channel",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "body",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "due_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "assigned_to",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "completed_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_activity",
+            "name": "legacy_source",
+            "type": "varchar(50)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "name",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "email",
+            "type": "varchar(190)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "phone",
+            "type": "varchar(40)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "kind",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_contacts",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "customer_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "author_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "title",
+            "type": "varchar(200)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "due_date",
+            "type": "date",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "notes",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_followups",
+            "name": "completed_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_interactions",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "crm_interactions",
+            "name": "customer_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_interactions",
+            "name": "author_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_interactions",
+            "name": "channel",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_interactions",
+            "name": "summary",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_interactions",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_notes",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "crm_notes",
+            "name": "customer_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_notes",
+            "name": "author_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "crm_notes",
+            "name": "note",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "crm_notes",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "first_name",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "last_name",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "national_id",
+            "type": "varchar(50)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "phone_primary",
+            "type": "varchar(30)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "phone_secondary",
+            "type": "varchar(30)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "governorate",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "address",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "postal_code",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "crm_status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "crm_source",
+            "type": "varchar(50)",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "customer_profiles",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "state",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "activated_by",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "activated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "resolved_by",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "resolved_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "lost_cases",
+            "name": "reason",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "nero_answers",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "nero_answers",
+            "name": "lang",
+            "type": "varchar(2)",
+            "key_type": ""
+        },
+        {
+            "table_name": "nero_answers",
+            "name": "keywords",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "nero_answers",
+            "name": "answer",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "nero_answers",
+            "name": "active",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "nero_answers",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "notifications",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "notifications",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "notifications",
+            "name": "type",
+            "type": "varchar(50)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notifications",
+            "name": "title",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notifications",
+            "name": "body",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "notifications",
+            "name": "related_type",
+            "type": "varchar(50)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notifications",
+            "name": "related_id",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notifications",
+            "name": "read_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "notifications",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "id",
+            "type": "bigint(20)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "notification_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "channel",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "attempts",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "next_attempt_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "locked_until",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "last_error",
+            "type": "varchar(80)",
+            "key_type": ""
+        },
+        {
+            "table_name": "notification_outbox",
+            "name": "accepted_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "orders",
+            "name": "order_number",
+            "type": "varchar(20)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "orders",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "orders",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "orders",
+            "name": "subtotal_tnd",
+            "type": "decimal(12,3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "discount_tnd",
+            "type": "decimal(12,3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "delivery_fee_tnd",
+            "type": "decimal(12,3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "total_tnd",
+            "type": "decimal(12,3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "promo_code_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "orders",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "orders",
+            "name": "shipping_address",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "notes",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "quote_snapshot",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "production_snapshot",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "version",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "ordered_by",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "production_stage",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "orders",
+            "name": "quote_id",
+            "type": "char(48)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "order_items",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "order_items",
+            "name": "order_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "order_items",
+            "name": "product_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "order_items",
+            "name": "quantity",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_items",
+            "name": "unit_price_tnd",
+            "type": "decimal(12,3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_items",
+            "name": "line_total_tnd",
+            "type": "decimal(12,3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_items",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_items",
+            "name": "owner_invite_id",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_items",
+            "name": "net_millimes",
+            "type": "bigint(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_items",
+            "name": "discount_millimes",
+            "type": "bigint(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_status_history",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "order_status_history",
+            "name": "order_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "order_status_history",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_status_history",
+            "name": "note",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "order_status_history",
+            "name": "changed_by",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "order_status_history",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "password_reset_tokens",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "password_reset_tokens",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "password_reset_tokens",
+            "name": "token_hash",
+            "type": "varchar(255)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "password_reset_tokens",
+            "name": "expires_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "password_reset_tokens",
+            "name": "used_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "password_reset_tokens",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "products",
+            "name": "code",
+            "type": "varchar(30)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "products",
+            "name": "name_fr",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "name_ar",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "price_tnd",
+            "type": "decimal(12,3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "is_combo",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "active",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "commercial_approved",
+            "type": "tinyint(4)",
+            "key_type": ""
+        },
+        {
+            "table_name": "products",
+            "name": "price_version",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "professional_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "customer_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "notes",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "consent_status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "scopes",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_clients",
+            "name": "consented_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "business_name",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "profession",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "profession_other",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "phone",
+            "type": "varchar(30)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "city",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "verification_status",
+            "type": "varchar(20)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "verification_notes",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "verified_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "verified_by",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "professional_profiles",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "code",
+            "type": "varchar(50)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "discount_type",
+            "type": "varchar(10)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "discount_value",
+            "type": "decimal(8,2)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "min_order_tnd",
+            "type": "decimal(8,2)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "applicable_product_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "usage_limit",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "per_user_limit",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "used_count",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "active",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "expires_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "starts_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_codes",
+            "name": "stackable",
+            "type": "tinyint(4)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_code_redemptions",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "promo_code_redemptions",
+            "name": "promo_code_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "promo_code_redemptions",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "promo_code_redemptions",
+            "name": "order_id",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "promo_code_redemptions",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_identities",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "qr_identities",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "qr_identities",
+            "name": "kind",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_identities",
+            "name": "token",
+            "type": "varchar(64)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "qr_identities",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "public_id",
+            "type": "char(48)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "lost_case_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "kind",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "nonce_hash",
+            "type": "char(64)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "visitor_hash",
+            "type": "char(64)",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "received_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "location_status",
+            "type": "varchar(30)",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "location_cipher",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "capability_hash",
+            "type": "char(64)",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "capability_expires",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "consent_version",
+            "type": "varchar(30)",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "consent_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_events",
+            "name": "location_expires",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_event_entries",
+            "name": "id",
+            "type": "bigint(20)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "qr_scan_event_entries",
+            "name": "event_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "qr_scan_event_entries",
+            "name": "type",
+            "type": "varchar(40)",
+            "key_type": ""
+        },
+        {
+            "table_name": "qr_scan_event_entries",
+            "name": "server_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "quotes",
+            "name": "id",
+            "type": "char(48)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "quotes",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "quotes",
+            "name": "request_hash",
+            "type": "char(64)",
+            "key_type": ""
+        },
+        {
+            "table_name": "quotes",
+            "name": "payload",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "quotes",
+            "name": "expires_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "quotes",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "rate_limits",
+            "name": "bucket_key",
+            "type": "char(64)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "rate_limits",
+            "name": "bucket",
+            "type": "bigint(20)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "rate_limits",
+            "name": "hits",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "rate_limits",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "registration_drafts",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "registration_drafts",
+            "name": "step",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "registration_drafts",
+            "name": "payload",
+            "type": "longtext",
+            "key_type": ""
+        },
+        {
+            "table_name": "registration_drafts",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "registration_events",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "registration_events",
+            "name": "source",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "registration_events",
+            "name": "counted",
+            "type": "tinyint(4)",
+            "key_type": ""
+        },
+        {
+            "table_name": "registration_events",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "schema_migrations",
+            "name": "version",
+            "type": "varchar(100)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "schema_migrations",
+            "name": "applied_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "serial_aliases",
+            "name": "alias",
+            "type": "varchar(100)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "serial_aliases",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "serial_aliases",
+            "name": "reason",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "serial_aliases",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "serial_counters",
+            "name": "species_code",
+            "type": "varchar(3)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "serial_counters",
+            "name": "last_value",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "session_notes",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "session_notes",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "session_notes",
+            "name": "professional_user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "session_notes",
+            "name": "session_type",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "session_notes",
+            "name": "session_date",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "session_notes",
+            "name": "note",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "session_notes",
+            "name": "recommendation",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "session_notes",
+            "name": "follow_up_date",
+            "type": "date",
+            "key_type": ""
+        },
+        {
+            "table_name": "session_notes",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "species_codes",
+            "name": "species",
+            "type": "varchar(20)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "species_codes",
+            "name": "code",
+            "type": "char(3)",
+            "key_type": ""
+        },
+        {
+            "table_name": "system_settings",
+            "name": "key",
+            "type": "varchar(100)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "system_settings",
+            "name": "value",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "system_settings",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "uploaded_media",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "uploaded_media",
+            "name": "user_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "uploaded_media",
+            "name": "path",
+            "type": "varchar(255)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "uploaded_media",
+            "name": "mime",
+            "type": "varchar(80)",
+            "key_type": ""
+        },
+        {
+            "table_name": "uploaded_media",
+            "name": "private",
+            "type": "tinyint(4)",
+            "key_type": ""
+        },
+        {
+            "table_name": "uploaded_media",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "users",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "users",
+            "name": "email",
+            "type": "varchar(190)",
+            "key_type": "UNI"
+        },
+        {
+            "table_name": "users",
+            "name": "password_hash",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "users",
+            "name": "role",
+            "type": "varchar(20)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "users",
+            "name": "status",
+            "type": "varchar(20)",
+            "key_type": ""
+        },
+        {
+            "table_name": "users",
+            "name": "language",
+            "type": "varchar(2)",
+            "key_type": ""
+        },
+        {
+            "table_name": "users",
+            "name": "is_demo",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "users",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "users",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "users",
+            "name": "auth_version",
+            "type": "int(11)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_attachments",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "veterinary_attachments",
+            "name": "record_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "veterinary_attachments",
+            "name": "file_path",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_attachments",
+            "name": "original_name",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_attachments",
+            "name": "mime_type",
+            "type": "varchar(100)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_attachments",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "id",
+            "type": "int(11)",
+            "key_type": "PRI"
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "companion_id",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "clinic_name",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "visit_date",
+            "type": "date",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "reason",
+            "type": "varchar(255)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "diagnosis",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "treatment",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "vaccination",
+            "type": "tinyint(1)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "vaccination_name",
+            "type": "varchar(150)",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "medication",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "notes",
+            "type": "text",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "created_by",
+            "type": "int(11)",
+            "key_type": "MUL"
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "created_at",
+            "type": "datetime",
+            "key_type": ""
+        },
+        {
+            "table_name": "veterinary_records",
+            "name": "updated_at",
+            "type": "datetime",
+            "key_type": ""
+        }
+    ],
+    "relations": [
+        {
+            "table_name": "professional_clients",
+            "column_name": "professional_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "professional_clients",
+            "column_name": "customer_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "notification_outbox",
+            "column_name": "notification_id",
+            "target": "notifications",
+            "target_column": "id"
+        },
+        {
+            "table_name": "audit_logs",
+            "column_name": "actor_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "password_reset_tokens",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "auth_tokens",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_contacts",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_contacts",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "companion_owner_invites",
+            "column_name": "invited_by",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "serial_aliases",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_followups",
+            "column_name": "customer_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_followups",
+            "column_name": "author_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "content_versions",
+            "column_name": "author_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "uploaded_media",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "order_items",
+            "column_name": "order_id",
+            "target": "orders",
+            "target_column": "id"
+        },
+        {
+            "table_name": "order_items",
+            "column_name": "product_id",
+            "target": "products",
+            "target_column": "id"
+        },
+        {
+            "table_name": "qr_identities",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "notifications",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_notes",
+            "column_name": "customer_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_notes",
+            "column_name": "author_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "qr_scan_event_entries",
+            "column_name": "event_id",
+            "target": "qr_scan_events",
+            "target_column": "id"
+        },
+        {
+            "table_name": "veterinary_attachments",
+            "column_name": "record_id",
+            "target": "veterinary_records",
+            "target_column": "id"
+        },
+        {
+            "table_name": "qr_scan_events",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "qr_scan_events",
+            "column_name": "lost_case_id",
+            "target": "lost_cases",
+            "target_column": "id"
+        },
+        {
+            "table_name": "promo_codes",
+            "column_name": "applicable_product_id",
+            "target": "products",
+            "target_column": "id"
+        },
+        {
+            "table_name": "registration_events",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "customer_profiles",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "order_status_history",
+            "column_name": "order_id",
+            "target": "orders",
+            "target_column": "id"
+        },
+        {
+            "table_name": "order_status_history",
+            "column_name": "changed_by",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "action_idempotency",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "companion_owners",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "companion_owners",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_interactions",
+            "column_name": "customer_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_interactions",
+            "column_name": "author_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "session_notes",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "session_notes",
+            "column_name": "professional_user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "lost_cases",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "lost_cases",
+            "column_name": "activated_by",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "professional_profiles",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "professional_profiles",
+            "column_name": "verified_by",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "promo_code_redemptions",
+            "column_name": "promo_code_id",
+            "target": "promo_codes",
+            "target_column": "id"
+        },
+        {
+            "table_name": "promo_code_redemptions",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "orders",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "orders",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "orders",
+            "column_name": "promo_code_id",
+            "target": "promo_codes",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_activity",
+            "column_name": "contact_id",
+            "target": "crm_contacts",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_activity",
+            "column_name": "actor_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "crm_activity",
+            "column_name": "assigned_to",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "registration_drafts",
+            "column_name": "user_id",
+            "target": "users",
+            "target_column": "id"
+        },
+        {
+            "table_name": "veterinary_records",
+            "column_name": "companion_id",
+            "target": "companions",
+            "target_column": "id"
+        },
+        {
+            "table_name": "veterinary_records",
+            "column_name": "created_by",
+            "target": "users",
+            "target_column": "id"
+        }
+    ]
+}

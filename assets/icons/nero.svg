@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="neroTitle">
+  <title id="neroTitle">NERO, l'assistant compagnon PETICA</title>
+  <defs>
+    <linearGradient id="neroBody" x1="10" y1="5" x2="90" y2="95" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7C57BC"/>
+      <stop offset="1" stop-color="#4E2F82"/>
+    </linearGradient>
+  </defs>
+  <!-- ears: one pointed (cat), one rounded (dog) -->
+  <path d="M22 32 L14 8 L38 22 Z" fill="#4E2F82"/>
+  <path d="M78 30c10-2 16-14 14-22-10 2-19 10-21 18Z" fill="#4E2F82"/>
+  <!-- head -->
+  <circle cx="50" cy="52" r="34" fill="url(#neroBody)"/>
+  <!-- muzzle patch -->
+  <ellipse cx="50" cy="64" rx="17" ry="12" fill="#EEE7F8"/>
+  <!-- eyes -->
+  <circle cx="39" cy="48" r="5.5" fill="#fff"/>
+  <circle cx="61" cy="48" r="5.5" fill="#fff"/>
+  <circle cx="40" cy="49" r="2.6" fill="#241B33"/>
+  <circle cx="62" cy="49" r="2.6" fill="#241B33"/>
+  <!-- nose -->
+  <ellipse cx="50" cy="60" rx="4.5" ry="3.4" fill="#241B33"/>
+  <!-- smile -->
+  <path d="M50 63.5c0 4-4 6-8 6M50 63.5c0 4 4 6 8 6" stroke="#241B33" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <!-- QR/id spot on cheek, nods to the tag motif -->
+  <rect x="66" y="58" width="10" height="10" rx="2" fill="#DDA13B"/>
+  <rect x="68.5" y="60.5" width="2" height="2" fill="#4E2F82"/>
+  <rect x="72.5" y="60.5" width="2" height="2" fill="#4E2F82"/>
+  <rect x="68.5" y="64.5" width="2" height="2" fill="#4E2F82"/>
+</svg>

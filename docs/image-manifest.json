@@ -1,0 +1,515 @@
+[
+  {
+    "image": 1,
+    "original": "PETICA — IMAGE/IMAGE 01 — The Threshold — Borzoi.png",
+    "original_sha256": "8e1d628900621c86c6aa20c4bef494926e12abd8552e4ca330f326b1cb8dd579",
+    "derivatives": [
+      {
+        "file": "image-01-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 7048
+      },
+      {
+        "file": "image-01-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 18650
+      },
+      {
+        "file": "image-01-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 43084
+      }
+    ]
+  },
+  {
+    "image": 2,
+    "original": "PETICA — IMAGE/IMAGE 02 — Identity as a Personal Document — Abyssinian.jpeg",
+    "original_sha256": "03a00fbe414e5cd3a1be5ec18115394f8f9a56239b96f323c6b8f50609f7baae",
+    "derivatives": [
+      {
+        "file": "image-02-480.webp",
+        "width": 480,
+        "height": 853,
+        "bytes": 37208
+      },
+      {
+        "file": "image-02-960.webp",
+        "width": 960,
+        "height": 1707,
+        "bytes": 131114
+      },
+      {
+        "file": "image-02-1600.webp",
+        "width": 1008,
+        "height": 1792,
+        "bytes": 156730
+      }
+    ]
+  },
+  {
+    "image": 3,
+    "original": "PETICA — IMAGE/IMAGE 03 — Silver QR Tag — Dalmatian.jpeg",
+    "original_sha256": "5006ddc8086e51566169a088217d2cc66a6a7ddb16086e70ab185eaf70a082ef",
+    "derivatives": [
+      {
+        "file": "image-03-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 23776
+      },
+      {
+        "file": "image-03-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 63528
+      },
+      {
+        "file": "image-03-1600.webp",
+        "width": 1600,
+        "height": 1600,
+        "bytes": 140006
+      }
+    ]
+  },
+  {
+    "image": 4,
+    "original": "PETICA — IMAGE/IMAGE 04 — Gold QR Tag — Oriental Shorthair.jpeg",
+    "original_sha256": "b4e2ca83c2c27e8d4d914b495c5abcb8e9e6f2b64149bb4440647fbeb2622f6b",
+    "derivatives": [
+      {
+        "file": "image-04-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 9644
+      },
+      {
+        "file": "image-04-960.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 30768
+      },
+      {
+        "file": "image-04-1600.webp",
+        "width": 1600,
+        "height": 1600,
+        "bytes": 73608
+      }
+    ]
+  },
+  {
+    "image": 5,
+    "original": "PETICA — IMAGE/IMAGE 05 — A Home With More Than One Companion.png",
+    "original_sha256": "a376436ffc957d74a8f1fc209d78a30c0e94c316cf3998cfa426f3cccdb329e9",
+    "derivatives": [
+      {
+        "file": "image-05-480.webp",
+        "width": 480,
+        "height": 240,
+        "bytes": 17632
+      },
+      {
+        "file": "image-05-960.webp",
+        "width": 960,
+        "height": 480,
+        "bytes": 50840
+      },
+      {
+        "file": "image-05-1600.webp",
+        "width": 1600,
+        "height": 800,
+        "bytes": 116134
+      }
+    ]
+  },
+  {
+    "image": 6,
+    "original": "PETICA — IMAGE/IMAGE 06 — The Way Back.jpeg",
+    "original_sha256": "f199fe78c1c66268eb9875813e940ffc397e7a7984c414b05e2d81854f711d39",
+    "derivatives": [
+      {
+        "file": "image-06-480.webp",
+        "width": 480,
+        "height": 358,
+        "bytes": 27086
+      },
+      {
+        "file": "image-06-960.webp",
+        "width": 960,
+        "height": 717,
+        "bytes": 78392
+      },
+      {
+        "file": "image-06-1600.webp",
+        "width": 1600,
+        "height": 1195,
+        "bytes": 168136
+      }
+    ]
+  },
+  {
+    "image": 7,
+    "original": "PETICA — IMAGE/IMAGE 07 — A Companion Can Be More Than a Dog or Cat.jpeg",
+    "original_sha256": "8b3ad119442648f4b4514c43776a26c7a1aeb8b7987e313ad4ea32b15a2d5e28",
+    "derivatives": [
+      {
+        "file": "image-07-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 19648
+      },
+      {
+        "file": "image-07-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 64934
+      },
+      {
+        "file": "image-07-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 157730
+      }
+    ]
+  },
+  {
+    "image": 8,
+    "original": "PETICA — IMAGE/IMAGE 08 — Care in Practice — Veterinarian.jpeg",
+    "original_sha256": "4e3a2a2f1b094eb2a382902351333b289258d81a156469b6f95bceac43537e6a",
+    "derivatives": [
+      {
+        "file": "image-08-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 19534
+      },
+      {
+        "file": "image-08-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 55300
+      },
+      {
+        "file": "image-08-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 123938
+      }
+    ]
+  },
+  {
+    "image": 9,
+    "original": "PETICA — IMAGE/IMAGE 09 — Care in Practice — Grooming.jpeg",
+    "original_sha256": "808e2a3ec7b46228947492dabdbe491a84adfc6e6420a2225c17bbb0bf947de8",
+    "derivatives": [
+      {
+        "file": "image-09-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 25156
+      },
+      {
+        "file": "image-09-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 69354
+      },
+      {
+        "file": "image-09-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 158830
+      }
+    ]
+  },
+  {
+    "image": 10,
+    "original": "PETICA — IMAGE/IMAGE 10 — Care in Practice — Education.jpeg",
+    "original_sha256": "b94a3dc458da04c9ffd6ecd1732ca91958d4959b33d93a4ddf188d60b7bc0e56",
+    "derivatives": [
+      {
+        "file": "image-10-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 39604
+      },
+      {
+        "file": "image-10-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 112270
+      },
+      {
+        "file": "image-10-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 243418
+      }
+    ]
+  },
+  {
+    "image": 11,
+    "original": "PETICA — IMAGE/IMAGE 11 — Care in Practice — Equine.jpeg",
+    "original_sha256": "3944e0e8cd0ff39fb80a87118adcf68ca91985a10c5d64a0f4b725fefcc5e9d8",
+    "derivatives": [
+      {
+        "file": "image-11-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 28180
+      },
+      {
+        "file": "image-11-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 77996
+      },
+      {
+        "file": "image-11-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 179616
+      }
+    ]
+  },
+  {
+    "image": 12,
+    "original": "PETICA — IMAGE/IMAGE 12 — The Time Shared — Senior Companion.jpeg",
+    "original_sha256": "88227e1032957d884ede8388bc0e8cb298b0d54246332b098c13ea1ef64e918b",
+    "derivatives": [
+      {
+        "file": "image-12-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 11538
+      },
+      {
+        "file": "image-12-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 28124
+      },
+      {
+        "file": "image-12-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 57082
+      }
+    ]
+  },
+  {
+    "image": 13,
+    "original": "PETICA — IMAGE/IMAGE 13 — The Monument of the Movement.png",
+    "original_sha256": "caded1a4ed3f55206212f1d75831ea45e6e855fc445c94f7ae9b2cca446195b1",
+    "derivatives": [
+      {
+        "file": "image-13-480.webp",
+        "width": 480,
+        "height": 290,
+        "bytes": 14404
+      },
+      {
+        "file": "image-13-960.webp",
+        "width": 960,
+        "height": 580,
+        "bytes": 63548
+      },
+      {
+        "file": "image-13-1600.webp",
+        "width": 1600,
+        "height": 966,
+        "bytes": 169664
+      }
+    ]
+  },
+  {
+    "image": 14,
+    "original": "PETICA — IMAGE/IMAGE 14 — World — Six Openings.jpeg",
+    "original_sha256": "16d44948c7e735db5f988937f116e41678b9147a626be39266716cafc69086ba",
+    "derivatives": [
+      {
+        "file": "image-14-480.webp",
+        "width": 480,
+        "height": 320,
+        "bytes": 9684
+      },
+      {
+        "file": "image-14-960.webp",
+        "width": 960,
+        "height": 640,
+        "bytes": 31548
+      },
+      {
+        "file": "image-14-1600.webp",
+        "width": 1600,
+        "height": 1067,
+        "bytes": 91446
+      }
+    ]
+  },
+  {
+    "image": 15,
+    "original": "PETICA — IMAGE/IMAGE 15 — World — Tag Tracker.jpeg",
+    "original_sha256": "1f2b92100c1267414df0b31952168168f46fb8b894194fc9d2fab363a036969f",
+    "derivatives": [
+      {
+        "file": "image-15-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 12406
+      },
+      {
+        "file": "image-15-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 48770
+      },
+      {
+        "file": "image-15-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 140098
+      }
+    ]
+  },
+  {
+    "image": 16,
+    "original": "PETICA — IMAGE/IMAGE 16 — World — Market.jpeg",
+    "original_sha256": "a49236461049a5b2b04d900a3bc1030206b7f5861e43e62d8e13833af1fe7ac4",
+    "derivatives": [
+      {
+        "file": "image-16-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 14598
+      },
+      {
+        "file": "image-16-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 60926
+      },
+      {
+        "file": "image-16-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 170646
+      }
+    ]
+  },
+  {
+    "image": 17,
+    "original": "PETICA — IMAGE/IMAGE 17 — World — BreedMatch.jpeg",
+    "original_sha256": "fc7380a9944784de6c90ec2422688213aa164dda9a4eab0b5c57ab16169f84aa",
+    "derivatives": [
+      {
+        "file": "image-17-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 6656
+      },
+      {
+        "file": "image-17-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 17332
+      },
+      {
+        "file": "image-17-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 38798
+      }
+    ]
+  },
+  {
+    "image": 18,
+    "original": "PETICA — IMAGE/IMAGE 18 — World — Map.jpeg",
+    "original_sha256": "6379b7053d539077a3f4ccc3b6cd893894b5ccad127dace7570b526eafa5764a",
+    "derivatives": [
+      {
+        "file": "image-18-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 39232
+      },
+      {
+        "file": "image-18-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 103086
+      },
+      {
+        "file": "image-18-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 212102
+      }
+    ]
+  },
+  {
+    "image": 19,
+    "original": "PETICA — IMAGE/IMAGE 19 — World — Care Match.jpeg",
+    "original_sha256": "85c33c286453f50c98c0cd8121bb99add88a337432658b3ff78b993b53a5830e",
+    "derivatives": [
+      {
+        "file": "image-19-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 22430
+      },
+      {
+        "file": "image-19-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 68734
+      },
+      {
+        "file": "image-19-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 163298
+      }
+    ]
+  },
+  {
+    "image": 20,
+    "original": "PETICA — IMAGE/IMAGE 20 — World — Clothing Materials.jpeg",
+    "original_sha256": "3fe4d986af10fffaaccd31192417880319c158d10ea73cc055001f274e792856",
+    "derivatives": [
+      {
+        "file": "image-20-480.webp",
+        "width": 480,
+        "height": 600,
+        "bytes": 27544
+      },
+      {
+        "file": "image-20-960.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 122312
+      },
+      {
+        "file": "image-20-1600.webp",
+        "width": 1600,
+        "height": 2000,
+        "bytes": 312424
+      }
+    ]
+  },
+  {
+    "image": 21,
+    "original": "PETICA — IMAGE/IMAGE 21 — NERO — Paper Volume Presence.png",
+    "original_sha256": "6a85738f0a47304a61d65a3e417024b6b0caa9bc8891d167a1b177132f5397c9",
+    "derivatives": [
+      {
+        "file": "image-21-480.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 11768
+      }
+    ]
+  }
+]

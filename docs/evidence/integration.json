@@ -1,0 +1,2136 @@
+{
+  "checks": [
+    {
+      "name": "GET /auth/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /auth/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/login → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /auth/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/login → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /auth/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/login → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /auth/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/login → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /auth/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/login → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /movement → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Fresh movement baseline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /profile → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CSRF blocks mutations",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Real multipart image upload",
+      "passed": true,
+      "detail": "{\"success\":true,\"data\":{\"path\":\"/petica/storage/uploads/companions/f59e75f0b8a54458993a80573fb2829c93a985f0.jpg\",\"media_id\":1},\"path\":\"/petica/storage/uploads/companions/f59e75f0b8a54458993a80573fb2829c93a985f0.jpg\",\"media_id\":1}"
+    },
+    {
+      "name": "Executable upload rejected",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "DOG exact format",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Creation idempotent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions → 409",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /movement → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Movement increments once",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 401",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /admin/overview → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "CAT/HRS exact formats",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions → 422",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions/1 → 409",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Lost state persisted",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /q/25e93d99-c24b-4fd8-9919-5841940d50fa",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Public QR excludes private data",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Public text escapes XSS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Public contacts without JS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /qr/scans → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /qr/scans → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Scan deduplication",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /scan-events/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /scan-events/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /qr/scans/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d/location → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /qr/scans/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d/location → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /scan-events/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Denial remains without location",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /qr/scans/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d/location → 422",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /qr/scans/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d/location → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /scan-events/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Owner receives actual consented coordinates",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Coordinates encrypted at rest",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Scan never resolves lost case",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions/1/owners → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions/1/owners/1/confirm → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "49 + 8 exact millimes",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Multi 2 percent exact",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Secondary card -10 percent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 422",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Order idempotent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Production freezes companion identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/1/status → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /professionals/clients → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /professionals → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /professionals/2/verification → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /professionals/1/verification → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /professionals/clients → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /professionals/clients → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /relationships → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /relationships/2 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /relationships/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Groomer medical fields filtered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions/1/vet → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions/1/vet → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1/vet → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Owner reads saved vet record",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /relationships/2 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /relationships/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /crm/contacts → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /crm/contacts/2 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Prospect has no fake user",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /crm/contacts/2/activity → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /admin/content → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /nero/ask → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "NERO Tracker is future",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/forgot-password → 503",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wizard /wizard/account",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard /wizard/owner",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard /wizard/companion",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard /wizard/photo",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard /wizard/confirm",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard confirms persistent CAT identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wizard /wizard/confirm",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard retry creates one identity",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Wizard /wizard/order",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard /wizard/place-order",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Wizard reaches real confirmation",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Quote can produce only one order",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Dossier PRG retains id",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Identity and tag tokens permanent across edits",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /companions/1/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Owner explicitly resolves lost case",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /user/PETICAQR/index.php?id=1&petica=DOG-000000001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /user/PETICAQR/index.php?id=1001&petica=DOG-000000001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /id/DOG-000000001",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /q/not-a-token",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /auth/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/register-professional → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /professionals/me → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "New pro remains pending",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /professionals/clients → 403",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /relationships/2 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /relationships/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Professional 10 percent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/3 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Pro order does not expose production private snapshot",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /admin/promo → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Promo recalculates real quote",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 422",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 422",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 422",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Three companion discount 4 percent",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /auth/login → 401",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /contact → 422",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /auth/me.php → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions/detail.php?id=1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /admin/users/3/status → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /companions → 401",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders/preview → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /admin/products → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /admin/products/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /orders → 409",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /orders/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Earlier production price remains immutable",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "POST /admin/products/1 → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Eight concurrent registrations produce distinct serials",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/404.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route ar/404.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route fr/500.html",
+      "passed": true,
+      "detail": "500"
+    },
+    {
+      "name": "Route ar/500.html",
+      "passed": true,
+      "detail": "500"
+    },
+    {
+      "name": "Route fr/a-propos.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/a-propos.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/a-propos.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/a-propos.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/accessoires.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/accessoires.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/accessoires.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/accessoires.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/clients.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/clients.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/clients.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/clients.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/codes-promo.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/codes-promo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/codes-promo.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/codes-promo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/commandes.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/commandes.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/commandes.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/commandes.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/compagnons.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/compagnons.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/compagnons.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/compagnons.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/contenu.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/contenu.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/contenu.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/contenu.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/professionnels.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/professionnels.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/professionnels.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/professionnels.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/qr-identites.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/qr-identites.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/qr-identites.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/qr-identites.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/animal-perdu.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/animal-perdu.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/animal-perdu.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/animal-perdu.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/blog/article.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route ar/blog/article.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route fr/blog/conseils-fugue.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route ar/blog/conseils-fugue.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route fr/blog/histoire-noisette.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route ar/blog/histoire-noisette.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route fr/blog/identite-ethique.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route ar/blog/identite-ethique.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route fr/blog/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/blog/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/blog/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/blog/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/comment-ca-marche.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/comment-ca-marche.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/comment-ca-marche.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/comment-ca-marche.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/compte-type.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/compte-type.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/compte-type.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/compte-type.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/conditions.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/conditions.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/conditions.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/conditions.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/confidentialite.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/confidentialite.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/confidentialite.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/confidentialite.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/connexion.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/connexion.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/connexion.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/connexion.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/contact.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/contact.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/contact.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/crm/clients.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/crm/clients.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/crm/clients.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/crm/clients.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/crm/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/crm/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/crm/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/crm/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/crm/interactions.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/crm/interactions.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/crm/interactions.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/crm/interactions.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/crm/prospects.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/crm/prospects.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/crm/prospects.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/crm/prospects.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/crm/suivis.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/crm/suivis.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/crm/suivis.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/crm/suivis.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-client/commandes.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-client/commandes.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-client/commandes.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-client/commandes.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-client/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-client/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-client/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-client/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-client/mes-compagnons.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-client/mes-compagnons.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-client/mes-compagnons.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-client/mes-compagnons.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-client/notifications.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-client/notifications.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-client/notifications.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-client/notifications.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-client/profil.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-client/profil.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-client/profil.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-client/profil.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-pro/clients.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-pro/clients.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-pro/clients.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-pro/clients.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-pro/commandes.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-pro/commandes.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-pro/commandes.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-pro/commandes.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-pro/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-pro/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-pro/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-pro/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-pro/profil.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-pro/profil.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-pro/profil.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-pro/profil.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/faq.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/faq.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/faq.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/faq.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/futur.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/futur.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/futur.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/futur.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/id/dog-000000001.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route ar/id/dog-000000001.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route fr/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/inscription/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/inscription/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/inscription/index.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/inscription/index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/inscription/pro.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/inscription/pro.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/inscription/pro.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/inscription/pro.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/mouvement.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/mouvement.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/mouvement.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/mouvement.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/offline.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/offline.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/offline.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/offline.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/produits/carte-identite.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/produits/carte-identite.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/produits/carte-identite.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/produits/carte-identite.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/produits/qr-tag.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/produits/qr-tag.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/produits/qr-tag.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/produits/qr-tag.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/q/chat-present.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route ar/q/chat-present.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route fr/q/chien-perdu.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route ar/q/chien-perdu.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route fr/q/chien-present.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route ar/q/chien-present.html",
+      "passed": true,
+      "detail": "410"
+    },
+    {
+      "name": "Route fr/tarifs.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/tarifs.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/tarifs.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/tarifs.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/inscription/client.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/inscription/client.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/inscription/client.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/inscription/client.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-client/compagnons.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-client/compagnons.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-client/compagnons.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-client/compagnons.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/espace-client/recuperation.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route ar/espace-client/recuperation.html",
+      "passed": true,
+      "detail": "404"
+    },
+    {
+      "name": "Route fr/espace-client/relations.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/espace-client/relations.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/espace-client/relations.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/espace-client/relations.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/parametres.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/parametres.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/parametres.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/parametres.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/health.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/health.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/health.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/health.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/messages.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/messages.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/messages.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/messages.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/admin/scans.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/admin/scans.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/admin/scans.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/admin/scans.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/world.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/world.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/world.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/world.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/billion-movement.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/billion-movement.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/billion-movement.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/billion-movement.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/auth/reset-password.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/auth/reset-password.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/auth/reset-password.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/auth/reset-password.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/auth/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/auth/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/auth/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/auth/mot-de-passe-oublie.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route fr/auth/connexion.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language fr/auth/connexion.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Route ar/auth/connexion.html",
+      "passed": true,
+      "detail": "200"
+    },
+    {
+      "name": "Language ar/auth/connexion.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /fr/espace-client/compagnon.html?id=1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /fr/admin/commande.html?id=1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /ar/espace-client/compagnon.html?id=1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /ar/admin/commande.html?id=1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /config/local.php",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /database/schema.sql",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /reference/masters/x",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /.git/config",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /robots.txt",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /sitemap.xml",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Page /not-real.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "GET /scan-events/f29eb9cf51758546efc2a7a873af92b0b792620bff218c5d → 200",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Expired location inaccessible immediately",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Retention purges cipher",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "passed": 426,
+  "failed": 0
+}

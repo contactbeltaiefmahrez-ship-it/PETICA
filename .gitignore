@@ -1,0 +1,9 @@
+/config/local.php
+/storage/uploads/*
+!/storage/uploads/.htaccess
+/storage/private/*
+!/storage/private/.htaccess
+/storage/logs/*
+/.sites-runtime/
+/tests/output/
+*.log

@@ -1,0 +1,11 @@
+# Uploaded files (companion photos, paw photos, vet attachments) live under
+# this directory. Defense in depth: even though uploads are restricted to
+# image types, never let anything here be *executed* as PHP.
+<IfModule mod_php8.c>
+  php_flag engine off
+</IfModule>
+
+# Belt-and-braces for any other handler mapping (CGI, older PHP versions):
+<FilesMatch "\.(php|php[3-8]?|phtml|pl|py|cgi|sh)$">
+  Require all denied
+</FilesMatch>

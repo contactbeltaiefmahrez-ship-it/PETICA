@@ -1,0 +1,9 @@
+{
+    "serial_preserved": true,
+    "two_tokens_preserved": true,
+    "old_crm_kept": true,
+    "crm_import_once": true,
+    "historic_not_recounted": true,
+    "counter_advanced": true,
+    "state_preserved": true
+}
